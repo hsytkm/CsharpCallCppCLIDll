@@ -1,4 +1,4 @@
-# CsharpCallCppDll
+# CsharpCallCppCLIDll
 
 ## やりたいこと
  C#からC++/CLIのDLLをコールする
