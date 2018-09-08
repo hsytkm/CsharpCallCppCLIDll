@@ -13,7 +13,9 @@ namespace CppCliDll {
 		!CppCliClass();			// ファイナライザ(アンマネージドリソースのみ解放)
 
 		// テスト関数
-		int Multi(int x, int y);
+		int Multi(int x, int y){
+			return x * y;
+		}
 		System::String^ ToUpper(System::String^ lower);
 
 		// 自作クラス操作

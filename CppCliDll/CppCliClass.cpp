@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include <iostream>
-
 #include "CppCliClass.h"
 
 using namespace System;
@@ -28,11 +27,6 @@ CppCliClass::!CppCliClass()
 	std::cout << "CppCliClass: Call Finalizer" << std::endl;
 
 	// (ここでアンマネージドリソースを解放)
-}
-
-// 値型を計算して返す
-int CppCliClass::Multi(int x, int y) {
-	return x * y;
 }
 
 // 文字列(参照型の組み込みクラス)を受け取って返す
