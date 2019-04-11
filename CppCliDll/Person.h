@@ -8,17 +8,13 @@ namespace CppCliDll {
 		int age;
 
 	public:
-		Person(System::String^ name, int age)
-		{
-			this->name = name;
-			this->age = age;
-		}
+		Person(System::String^ name, int age) : name(name), age(age) {}
 
 		~Person() {}
 		!Person() {}
 
-		System::String^ GetName() { return name; }
-		int GetAge() { return age; }
+		property System::String^ Name { System::String^ get() { return name; } }
+		property int Age { int get() { return age; } }
 
 	};
 }

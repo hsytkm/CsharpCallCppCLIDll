@@ -7,17 +7,18 @@ namespace MixedLanguage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"純粋C++/CLIのDLLコール");
+            Console.WriteLine($"C++/CLIのDLLコール");
             using (var cli = new CppCliClass())
             {
+                Console.WriteLine($"  From C++/CLI");
+
                 var mul = cli.Multi(2, 3);      // 掛け算の取得
                 var str = cli.ToUpper("abCde"); // 大文字の取得
-                var person = cli.GetPersonClass();
-
-                Console.WriteLine($"  From C++/CLI");
                 Console.WriteLine($"  Multi={mul} / Upper:{str}");
-                Console.WriteLine($"  Name={cli.GetPersonName()} / Age={cli.GetPersonAge()}");
-                Console.WriteLine($"  Name={person.GetName()} / Age={person.GetAge()}");
+                Console.WriteLine($"  Name={cli.PersonName} / Age={cli.PersonAge}");
+
+                var person = cli.PersonClass;
+                Console.WriteLine($"  Name={person.Name} / Age={person.Age}");
             }
             Console.ReadKey();
         }
